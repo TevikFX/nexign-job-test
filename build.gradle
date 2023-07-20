@@ -1,0 +1,61 @@
+plugins {
+    id 'java-library'
+    id('io.qameta.allure') version '2.11.2'
+}
+
+def selenideVersion = "6.16.0",
+    junitVersion = "5.10.0-RC1",
+    slf4jVersion = "2.0.7",
+    assertjVersion = "3.24.2",
+    allureVersion = "2.23.0"
+
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter { // Отвечает за появление папки build/allure-results
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 { // Название фреймворка
+                adapterVersion.set(allureVersion) // Версия интеграции фреймворка и Allure
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.assertj:assertj-core:$assertjVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+    )
+    testRuntimeOnly(
+    "org.slf4j:slf4j-simple:$slf4jVersion")
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task ui_tst(type: Test) {
+    useJUnitPlatform{
+        includeTags("UITest")
+    }
+}
