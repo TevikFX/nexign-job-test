@@ -72,7 +72,7 @@ allure serve build/allure-results
 
 
 # Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
-![This is an image](/design/images/bot.png)
+![This is an image](design/images/bot.png)
 
 
 
