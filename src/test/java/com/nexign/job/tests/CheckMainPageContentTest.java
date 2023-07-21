@@ -36,7 +36,7 @@ public class CheckMainPageContentTest extends TestBase {
 
     @Test
     @Tag("UITest")
-    @DisplayName("Проверка наличия блока контактов для связи")
+    @DisplayName("Проверка наличия блока подписки на соцсети в подвале страницы")
     void selectionTextTest() {
         step("Проверяем, что на главной странице есть footer", () -> {
             Assertions.assertTrue(mainPage.selectElementByName("section").exists(),
@@ -45,9 +45,9 @@ public class CheckMainPageContentTest extends TestBase {
 
         mainPage.selectElementByName("section").scrollIntoView(true);
 
-        step("Проверяем, что в нём есть раздел контакты", () -> {
-            Assertions.assertTrue(mainPage.selectElementByText("Контакты").exists(),
-                    "Ошибка: раздел контактов отсутствует или не имеет заголовка");
+        step("Проверяем, что в нём есть раздел с подпиской на соцсети", () -> {
+            Assertions.assertTrue(mainPage.getSocial().exists(),
+                    "Ошибка: раздел ссылок на соцсети отсутствует");
         });
     }
 

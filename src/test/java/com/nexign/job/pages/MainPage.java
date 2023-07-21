@@ -15,7 +15,8 @@ public class MainPage {
             clickSendResumeInput = $("#block-system-main"),
             checkSubmissionInput = $(".form-wrapper__content"),
             headerSubs = $("ul.header-new__list"),
-            mainText = $("h1.hero-main-page__title");
+            mainText = $("h1.hero-main-page__title"),
+            social = $("ul.footer-socials");
 
     public MainPage openPage() {
         open("https://job.nexign.com/");
@@ -61,5 +62,9 @@ public class MainPage {
 
     public SelenideElement getMainText() {
         return mainText;
+    }
+
+    public SelenideElement getSocial() {
+        return social;
     }
 }
