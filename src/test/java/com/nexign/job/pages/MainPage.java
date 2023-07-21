@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
     private final SelenideElement
-            vacancyInput = $("ul.header-new__list"),
+            openTab = $("ul.header-new__list"),
             searchVacancyInput = $(".page-content"),
             actualVacancyInput = $(".view-content :nth-child(4) a"),
             clickSendResumeInput = $("#block-system-main"),
@@ -22,8 +22,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage setVacancyInput(String value) {
-        vacancyInput.shouldHave(text(value)).click();
+    public MainPage setOpenTab(String value) {
+        openTab.shouldHave(text(value)).click();
         return this;
     }
 

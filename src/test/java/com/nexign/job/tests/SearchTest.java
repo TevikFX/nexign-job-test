@@ -25,7 +25,7 @@ public class SearchTest extends TestBase {
     @DisplayName("Поиск конкретной вакансии")
     void vacancySearchTest() {
         step(String.format("Нажимаем на вкладку %s", textSelection + vacancy + textSelection), () -> {
-            mainPage.setVacancyInput(vacancy);
+            mainPage.setOpenTab(vacancy);
         });
 
         step(String.format("Нажимаем на раздел %s", textSelection + searchVacancy + textSelection), () -> {
