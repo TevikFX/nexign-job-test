@@ -38,11 +38,11 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.assertj:assertj-core:$assertjVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "org.aspectj:aspectjweaver:$aspectjVersion"
-
+            "org.aspectj:aspectjweaver:$aspectjVersion",
     )
     testRuntimeOnly(
-    "org.slf4j:slf4j-simple:$slf4jVersion")
+            "org.slf4j:slf4j-simple:$slf4jVersion"
+    )
 }
 
 tasks.withType(Test) {
@@ -58,7 +58,7 @@ tasks.withType(Test) {
 }
 
 task ui_tst(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags("UITest")
     }
 }
