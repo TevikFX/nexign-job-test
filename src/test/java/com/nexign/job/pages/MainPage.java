@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byLinkText;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
@@ -12,7 +13,9 @@ public class MainPage {
             searchVacancyInput = $(".page-content"),
             actualVacancyInput = $(".view-content :nth-child(4) a"),
             clickSendResumeInput = $("#block-system-main"),
-            checkSubmissionInput = $(".form-wrapper__content");
+            checkSubmissionInput = $(".form-wrapper__content"),
+            headerSubs = $("ul.header-new__list"),
+            mainText = $("h1.hero-main-page__title");
 
     public MainPage openPage() {
         open("https://job.nexign.com/");
@@ -44,4 +47,19 @@ public class MainPage {
         return this;
     }
 
+    public SelenideElement selectElementByName(String elemName) {
+        return $(elemName);
+    }
+
+    public SelenideElement selectElementByText(String text) {
+        return $(byText(text));
+    }
+
+    public SelenideElement getHeaderSubs() {
+        return headerSubs;
+    }
+
+    public SelenideElement getMainText() {
+        return mainText;
+    }
 }
