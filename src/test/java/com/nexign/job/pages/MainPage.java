@@ -11,7 +11,7 @@ public class MainPage {
             vacancyInput = $("ul.header-new__list"),
             searchVacancyInput = $(".page-content"),
             actualVacancyInput = $(".view-content :nth-child(4) a"),
-            clickSendResumeInput = $("#block-system-main button"),
+            clickSendResumeInput = $("#block-system-main"),
             checkSubmissionInput = $(".form-wrapper__content");
 
     public MainPage openPage() {

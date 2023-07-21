@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Tag("UITest")
 @DisplayName("Поиск на странице job.nexign.com")
 public class SearchTest extends TestBase {
     private final static String vacancy = "Вакансии";
@@ -24,7 +25,6 @@ public class SearchTest extends TestBase {
     }
 
     @Test
-    @Tag("UITest")
     @DisplayName("Поиск конкретной вакансии")
     void vacancySearchTest() {
         step(String.format("Нажимаем на вкладку %s", textSelection + vacancy + textSelection), () -> {
