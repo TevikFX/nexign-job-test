@@ -14,7 +14,7 @@
 - [x] Соответствие вёрстки сайта общепринятым стандартам
 
 ## Проект реализован с использованием
-![This is an image](design/icons/Java.png)![This is an image](design/icons/Gradle.png)![This is an image](design/icons/Intelij_IDEA.png)![This is an image](design/icons/Selenide.png)![This is an image](design/icons/Selenoid.png)![This is an image](design/icons/JUnit5.png)![This is an image](design/icons/Jenkins.png)![This is an image](design/icons/Allure_Report.png)![This is an image](design/icons/AllureTestOps.png)![This is an image](design/icons/Telegram.png)![This is an image](design/icons/Jira.png)
+![This is an image](design/icons/Java.png)![This is an image](design/icons/Gradle.png)![This is an image](design/icons/Intelij_IDEA.png)![This is an image](design/icons/Selenide.png)![This is an image](design/icons/Selenoid.png)![This is an image](design/icons/JUnit5.png)![This is an image](design/icons/Jenkins.png)![This is an image](design/icons/Allure_Report.png)![This is an image](design/icons/AllureTestOps.png)![This is an image](design/icons/Telegram.png)
 
 # Запуск автотестов выполняется на сервере Jenkins
 > <a target="_blank" href="https://jenkins.autotests.cloud/job/TevikFX-nexign-job-test/">Ссылка на проект в Jenkins</a>
