@@ -16,7 +16,7 @@ public class TestBase {
     MainPage mainPage = new MainPage();
 
     @BeforeAll
-    static void beforeAll() {
+    static void setup() {
         Configuration.baseUrl = "https://job.nexign.com/";
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
